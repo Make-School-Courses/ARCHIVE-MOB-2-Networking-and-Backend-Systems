@@ -42,8 +42,6 @@ six==1.9.0
 SQLAlchemy==1.1.12
 Werkzeug==0.10.4
 
-Run ```touch requirements.txt``` in terminal.
-
 
 ## Database Setup
 
@@ -68,6 +66,7 @@ Install postgres with:
 
 ## Creating your first Flask app
 
+```python
 from flask import Flask, request
 
 app = Flask(__name__)
@@ -78,6 +77,8 @@ def hello_world():
 
 if __name__ == '__main__':
     app.run()
+
+```
 
 Run ```python app.py``` in terminal and copy the url in the terminal into a browser.
 
