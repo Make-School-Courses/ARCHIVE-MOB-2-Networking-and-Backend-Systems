@@ -1,5 +1,9 @@
 # Networking and Backend Systems
 
+Become a fullstack mobile developer by learning how to use and build web APIs, as well as to design, build, and deploy web API services with Python and Flask, a minimalist web application framework.
+
+We will learn about networking in iOS, explore how to make network requests and build a web API.
+Learn internet architecture, HTTP, REST API design concepts, test-driven development, data modeling, representation, persistence, authentication, authorization, and documentation. After finishing this course, you will be prepared to design, build, and deploy your own RESTful web API services using Python, Flask, and other popular libraries and tools. These principles and concepts carry over to developing web services in other languages and frameworks as well.
 
 
 ## Objectives and Competencies
