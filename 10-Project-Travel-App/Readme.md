@@ -18,7 +18,20 @@ Your API should contain/use:
 
 ### Routes and Actions
 
-Create unit tests for and then implement the following new routes:
+Create unit tests for and then implement the following new resources and routes:
+
+### ***Users***
+
+| Action  | HTTP Verb | Path             | Effect                           |
+|---------|-----------|------------------|----------------------------------|
+| create  | POST      | /users           | Creates a new user               |
+| index   | GET       | /users           | Shows/lists all users            |
+| show    | GET       | /users/<user_id> | Shows a specific user            |
+| update  | PUT/PATCH | /users/<user_id> | Updates/replaces a specific user |
+| destroy | DELETE    | /users/<user_id> | Deletes a specific user          |
+
+
+### ***Trips***
 
 | Action  	| HTTP Verb 	| Path             	| Effect                           	|
 |---------	|-----------	|------------------	|----------------------------------	|
@@ -29,5 +42,7 @@ Create unit tests for and then implement the following new routes:
 | destroy 	| DELETE    	| /trips/<trip_id> 	| Deletes a specific trip          	|
 
 
+### Relationships
 
 
+![Relationships](erd-trips.png)

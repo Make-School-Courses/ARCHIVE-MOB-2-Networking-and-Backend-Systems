@@ -1,4 +1,5 @@
 import PlaygroundSupport
+import Foundation
 
 /*:
  # URLs, URLRequests and URLSessions
@@ -6,7 +7,16 @@ import PlaygroundSupport
  
  ## URL - Uniform Resource Locator
  
+ ### Types of Requests
+ These are the 4 main REST request types we will be looking at:-
+ They each perform a specific role in http networking.
+ 
+ - GET   :- Fetches a resource
+ - POST  :- Creates a new resource
+ - PUT/PATCH/UPDATE:- Updates a resource
+ - DELETE:- Deletes a resource
 */
+
 
 
 /*:
@@ -30,14 +40,16 @@ let url = URL(string: "www.google.com/images/434.png")!
 var request = URLRequest(url: url)
 request.httpMethod = "GET"
 
-//3
+// 3
 let session = URLSession.shared
 
-let task = session.dataTask(with: request) { (data, response, error) in
+// 4
+let downloadTask = session.dataTask(with: request) { (data, response, error) in
     
 }
 
-task.resume()
+// 5
+downloadTask.resume()
 
 
 /*:
@@ -51,18 +63,6 @@ task.resume()
  
 */
 
-
-/*:
- ## JSON
- 
- JSON stands for Javascript Object Notation.
- It is one of a few formats that is used to transfer information over the web.
- JSON looks like this:
- {
- "name": "Eliel"
- "age": 23
- }
-*/
 
 //: [Next](@next)
 

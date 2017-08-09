@@ -58,7 +58,13 @@ Install postgres with:
 
 ## Creating our database
 
+We need to create a database in postgres to
 
+Open up a postgres session in terminal by running ```psql```
+
+This opens up a postgres session and allows us to create a database(store) for our trip planner API.
+
+```create database trip_planner_db;```
 
 ## Migrations
 

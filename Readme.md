@@ -3,7 +3,6 @@
 Become a fullstack mobile developer by learning how to use and build web APIs, as well as to design, build, and deploy web API services with Python and Flask, a minimalist web application framework.
 
 We will learn about networking in iOS, explore how to make network requests and build a web API.
-Learn internet architecture, HTTP, REST API design concepts, test-driven development, data modeling, representation, persistence, authentication, authorization, and documentation. After finishing this course, you will be prepared to design, build, and deploy your own RESTful web API services using Python, Flask, and other popular libraries and tools. These principles and concepts carry over to developing web services in other languages and frameworks as well.
 
 
 ## Objectives and Competencies
@@ -23,24 +22,35 @@ Learn internet architecture, HTTP, REST API design concepts, test-driven develop
 - #### Week 1
     - [Intro to Networking in iOS](01-Intro-to-Networking)
     - [Constructing Requests with URLs, URLRequests And URLSessions](02-Constructing-Requests-with-URLSession)
-    - [Error Handling](03-Error-Handling)
+    - [Modeling data & Error Handling](03-Modeling-data)
     
 - #### Week 2
-    - [Modeling data with JSON](04-Modeling-data-with-JSON)
-    - [Intro to concurrency- GCD](05-Intro-to-concurrency)
-    - [Design Patterns - SOLID](06-Design-patterns-SOLID)
-    - [Project - Product Hunt API](07-Project-Product-Hunt-API)
+    - [Intro to concurrency- GCD](04-Intro-to-concurrency)
+    - [Design Patterns - SOLID](05-Design-patterns-SOLID)
+    - [Project - Product Hunt API](06-Project-Product-Hunt-API)
 
 - #### Week 3
-    - [Intro to Backend Systems - Creating a Flask API](08-Intro-To-Backend)
-    - [Routes](09-Routes)
-    - [Databases](10-Databases)
-    - [Project - Travel App](11-Project-Travel-App)
+    - [Intro to Backend Systems - Creating a Flask API](07-Intro-To-Backend)
+    - [Creating Routes](08-Creating-Routes)
+    - [Intro to Databases](09-Intro-to-Databases)
+    - [Project - Travel App](10-Project-Travel-App)
+    
 - #### Week 4
+    - [Database Relationships](11-Database-relationships)
+    - [Test-Driven-Development](12-Test-Driven-Development)
+    - [Authentication & Security](13-Authentication-and-Security)
     
 - #### Week 5
-    
+    - [Project - Custom Project]()
+    - [Deployment](14-Deployment)
     
 - #### Week 6
+    - [Project - Custom Project]()
+
+## Evaluations
+
+To pass the course, students will have:
+
+    1. Completed all challenges.
     
 
