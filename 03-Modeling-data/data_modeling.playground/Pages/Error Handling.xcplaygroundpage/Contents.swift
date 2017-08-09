@@ -53,7 +53,7 @@ class Networking {
             if let data = data {
                 let json = try! JSONSerialization.jsonObject(with: data, options: .allowFragments) as! Data
                 
-                guard let anime = try? JSONDecoder().decode([Anime].self, from: json) else {return completion(Result.failure(NetworkError.couldNotParseJSON)) }
+                guard let anime = try? JSONDecoder().decode([Sting: Anime].self, from: json) else {return completion(Result.failure(NetworkError.couldNotParseJSON)) }
                 
                 completion(Result.success(anime))
             }
@@ -68,5 +68,9 @@ result.getAnime(id: "1") { (res) in
 
 PlaygroundPage.current.needsIndefiniteExecution = true
 
+/*:
+ ## Resources
+ 1. [JSON modeling with Swift 4](https://grokswift.com/json-swift-4/)
+*/
 
 //: [Next](@next)

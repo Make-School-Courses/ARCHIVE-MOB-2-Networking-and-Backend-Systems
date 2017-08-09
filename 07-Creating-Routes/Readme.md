@@ -8,16 +8,17 @@
 - Understand request and response
 
 
-## REST
+## REST & Resourceful Routing
 
 We are going to be following REST standards building this API.
 With REST every resource in your application maps out to a route that can be accessed.
 Think **User** resource with user routes, trips resource with routes for trips
 
 
-## HTTP Methods
+## Route types
+### Nested Routes
 
-
+When you have a collection of related resources as we do with users and trips, sometimes you want to nest one resource into another.
 
 | Action  	| HTTP Verb 	| Path             	| Effect                           	        |
 |---------	|-----------	|------------------	|-------------------------------------------|
@@ -28,12 +29,7 @@ Think **User** resource with user routes, trips resource with routes for trips
 | destroy 	| DELETE    	| /user/trips/<trip_id> 	| Deletes a specific trip          	|
 
 
-## Route types
-
-### Member Routes
-Member routes
-### Collection Routes
-
+## Adding RESTful routes in Flask
 
 
 ## Challenges

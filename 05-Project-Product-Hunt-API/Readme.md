@@ -10,7 +10,7 @@ A client wants to build a simple wrapper around Product Hunt using the PH API. T
 
 3. Make a networking request to fetch all of the products featured today on PH.
 
-4. Convert the data returned into models using flatMap and failable initializers.
+4. Convert the data returned into models.
 
 5. Display the data returned in a feed that shows each product's name, tagline, number of votes, and thumbnail.
 
