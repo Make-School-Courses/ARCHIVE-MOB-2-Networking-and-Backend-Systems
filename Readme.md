@@ -34,8 +34,8 @@ We will learn about networking in iOS, explore how to make network requests and 
     - [Resources and Routes](08-Resources-and-Routes)
     
 - #### Week 4
-    - [Test-Driven-Development](12-Test-Driven-Development)
-    - [Authentication & Security](13-Authentication-and-Security)
+    - [Test-Driven-Development](11-Test-Driven-Development)
+    - [Authentication & Security](12-Authentication-and-Security)
     - [Project - Travel App](10-Project-Travel-App)
     
 - #### Week 5
