@@ -25,23 +25,21 @@ We will learn about networking in iOS, explore how to make network requests and 
     - [Modeling data & Error Handling](03-Modeling-data)
     
 - #### Week 2
-    - [Intro to concurrency- GCD](04-Intro-to-concurrency)
-    - [Design Patterns - SOLID](05-Design-patterns-SOLID)
+    - [Intro to concurrency- GCD](04-Intro-to-Concurrency)
+    - [Design Pattern - SOLID](05-Design-Pattern-SOLID)
     - [Project - Product Hunt API](06-Project-Product-Hunt-API)
 
 - #### Week 3
     - [Intro to Backend Systems - Creating a Flask API](07-Intro-To-Backend)
-    - [Creating Routes](08-Creating-Routes)
-    - [Intro to Databases](09-Intro-to-Databases)
-    - [Project - Travel App](10-Project-Travel-App)
+    - [Resources and Routes](08-Resources-and-Routes)
     
 - #### Week 4
-    - [Database Relationships](11-Database-relationships)
     - [Test-Driven-Development](12-Test-Driven-Development)
     - [Authentication & Security](13-Authentication-and-Security)
+    - [Project - Travel App](10-Project-Travel-App)
     
 - #### Week 5
-    - [Project - Custom Project]()
+    - [Project - Custom Project](15-Project-Travel-App)
     - [Deployment](14-Deployment)
     
 - #### Week 6

@@ -13,6 +13,10 @@
 - Understand the benefits of writing tests
 
 
+## TDD
+
+TDD is an approach to software development where we start writing tests first before writing any application code.
+
 ## Why do we write tests?
 
 We write tests to ensure that a part of our software is behaving the way we expect it to 99% of the time.
@@ -46,7 +50,10 @@ Unit testing tests individual components or group of related components. It is o
 
 
 ## Testing our flask API
- 
+
+1. Come up with a resource/task and have students think of possible test cases. Have them vote on good ones and bad ones
+
+
 
 ## Challenges
 1. Write 5 tests for our user/trip resource & route. 

@@ -47,15 +47,17 @@ class Networking {
     
     func getAnime(id: String, completion: @escaping (Result<[Anime]>) -> Void) {
         
-        var request = URLRequest(url: baseURL)
-        
-        session.dataTask(with: baseURL) { (data, resp, err) in
+        let request = URLRequest(url: baseURL)
+
+        session.dataTask(with: request) { (data, resp, err) in
             if let data = data {
                 let json = try! JSONSerialization.jsonObject(with: data, options: .allowFragments) as! Data
                 
-                guard let anime = try? JSONDecoder().decode([Sting: Anime].self, from: json) else {return completion(Result.failure(NetworkError.couldNotParseJSON)) }
+                guard let anime = try? JSONDecoder().decode([String: [Anime]].self, from: data) else {return completion(Result.failure(NetworkError.couldNotParseJSON)) }
+                guard let animes = anime["data"]
+                    else {return completion(Result.failure(NetworkError.couldNotParseJSON))}
                 
-                completion(Result.success(anime))
+                completion(Result.success(animes))
             }
             }.resume()
     }

@@ -24,11 +24,11 @@ Create unit tests for and then implement the following new resources and routes:
 
 | Action  | HTTP Verb | Path             | Effect                           |
 |---------|-----------|------------------|----------------------------------|
-| create  | POST      | /users           | Creates a new user               |
-| index   | GET       | /users           | Shows/lists all users            |
-| show    | GET       | /users/<user_id> | Shows a specific user            |
-| update  | PUT/PATCH | /users/<user_id> | Updates/replaces a specific user |
-| destroy | DELETE    | /users/<user_id> | Deletes a specific user          |
+| create  | POST      | /user           | Creates a new user               |
+| index   |           |                 |                                  |
+| show    | GET       | /user           | Shows a specific user            |
+| update  | PUT/PATCH | /user           | Updates/replaces a specific user |
+| destroy | DELETE    | /user           | Deletes a specific user          |
 
 
 ### ***Trips***
@@ -42,7 +42,14 @@ Create unit tests for and then implement the following new resources and routes:
 | destroy 	| DELETE    	| /trips/<trip_id> 	| Deletes a specific trip          	|
 
 
-### Relationships
+## Project Milestones
 
+- [x] User - Create/Update a user - post request
+- [x] User - Get a user with a get request
 
-![Relationships](erd-trips.png)
+- [x] Trips - Create a trip
+- [x] Trips - Update a trip with completed status
+
+- [x] User - Sign up a user, hash the password
+- [x] User - Sign in a user, check password with hash in database
+

@@ -31,5 +31,22 @@ When you have a collection of related resources as we do with users and trips, s
 
 ## Adding RESTful routes in Flask
 
+To attach a route to a resource in Flask, you use the ```add_resource(<Resource>, <Route>) ``` method.
+
+Eg.
+
+api.add_resource(User, '/user/')
+
+
+## HTTP Status Codes and Responses
+
+Full list of HTTP status codes:
+
+http://www.restapitutorial.com/httpstatuscodes.html
+
 
 ## Challenges
+
+1. Create a user route, validate that the parameters sent to the route has a username, email and password in the json payload sent to the server. Send back 200 when parameters match, 400 (Bad request) if parameters don't match
+
+
