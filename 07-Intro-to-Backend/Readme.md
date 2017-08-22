@@ -105,7 +105,6 @@ def person_route():
 
 ```
 
-
 ## Using the Python Debugger
 
 We will be using the python debugger """ pdb """ for debugging our python code.
@@ -157,6 +156,36 @@ Use:
 - **q** To quit debugging.
 - **l** to find out where your breakpoint is in your code.
 - **n** to go to the next line of execution.
+
+
+## Basic flask setup
+```python
+
+from flask import Flask, request, make_response
+from flask_restful import Resource, Api
+from pymongo import MongoClient
+from bson.objectid import ObjectId
+from utils.mongo_json_encoder import JSONEncoder
+
+# Basic Setup
+# 1
+app = Flask(__name__)
+# 2
+mongo = MongoClient('localhost', 27017)
+# 3
+app.db = mongo.develop_database
+# 4
+api = Api(app)
+
+```
+
+The first few lines are mostly boilerplate. First we import all the dependencies that we use throughout the rest of the file. Then we perform the following steps to set up the flask app:
+
+We create a flask instance and assign it to the app variable
+We establish a connection to our MongoDB service that's running locally
+We specify a particular database (develop_database) which we'll use to store data. We assign it to app.db. Throughout the rest of server.py we'll access app.db whenever we need to communicate with the DB.
+We create an instance of the flask_restful API. Later we'll add different endpoints to that API. The flask_restful library is not necessary for creating RESTful APIs, but it makes our lives a little easier by providing a specific format for defining endpoints for the different resources in our app.
+
 
 ## Resources
 

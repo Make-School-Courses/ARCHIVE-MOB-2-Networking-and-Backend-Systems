@@ -53,3 +53,4 @@ Create unit tests for and then implement the following new resources and routes:
 - [x] User - Sign up a user, hash the password
 - [x] User - Sign in a user, check password with hash in database
 
+
