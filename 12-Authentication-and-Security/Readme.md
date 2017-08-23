@@ -31,6 +31,10 @@ Before we allow a user to access their account, we need a way to ensure that the
 - Authentication Tokens
 
 
+## HTTP Basic Auth
+
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Authentication
+
 ## Signing up a user
 
 To sign up a user, we need to store their password in the database. But we should never store passwords in plain text! Instead we are going to hash the password and store the hash in the database instead

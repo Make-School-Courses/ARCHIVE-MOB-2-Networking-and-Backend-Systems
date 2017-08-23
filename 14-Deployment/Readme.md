@@ -17,3 +17,4 @@
 ## Deploying to Heroku
 
 1. Install the heroku toolbelt. Follow the instructions here https://devcenter.heroku.com/articles/heroku-cli#download-and-install
+
