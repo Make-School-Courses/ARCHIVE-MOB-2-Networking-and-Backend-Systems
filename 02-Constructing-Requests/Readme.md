@@ -15,6 +15,5 @@ Download and run this playground:
 
 [Swift Playgrounds - URLRequests](url_requests.playground)
 
-
 ## Resources
 

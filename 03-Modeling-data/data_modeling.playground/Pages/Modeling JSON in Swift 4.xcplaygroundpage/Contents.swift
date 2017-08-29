@@ -37,7 +37,9 @@ extension Anime: Decodable {
     }
     
     init(from decoder: Decoder) throws {
-        let container = try decoder.container(keyedBy: Keys.self) // defining our (keyed) container
+        // define our keyed container
+        let container = try decoder.container(keyedBy: Keys.self)
+        
         let title: String = try container.decode(String.self, forKey: .title) // extracting the data
         let thumbnail: URL = try container.decode(URL.self, forKey: .thumbnail)
         

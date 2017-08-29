@@ -49,8 +49,14 @@ Create unit tests for and then implement the following new resources and routes:
 
 - [x] Trips - Create a trip
 - [x] Trips - Update a trip with completed status
+- [x] Trips - Add waypoints to a trip (a list of named stops in a trip)
 
 - [x] User - Sign up a user, hash the password
 - [x] User - Sign in a user, check password with hash in database
 
+
+## Client
+
+When you are done with the Flask API, write an iOS client to connect and display the list of trips.
+Authenticate the user, display trips and a detail of the trip with waypoints and completed status of each trip.
 

@@ -54,7 +54,6 @@ Unit testing tests individual components or group of related components. It is o
 1. Come up with a resource/task and have students think of possible test cases. Have them vote on good ones and bad ones
 
 
-
 ## Challenges
 1. Write 5 tests for our user/trip resource & route. 
 Examples of things you can test:

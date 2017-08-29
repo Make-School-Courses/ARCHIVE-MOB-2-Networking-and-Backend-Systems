@@ -5,16 +5,26 @@ Become a fullstack mobile developer by learning how to use and build web APIs, a
 We will learn about networking in iOS, explore how to make network requests and build a web API.
 
 
-## Objectives and Competencies
+## Objectives
 
 - Networking - Getting data from the internet.
 - JSON Parsing/Modeling.
 - Consuming data from an API.
 - Build a simple backend for your iOS app with Python & Flask.
 
+## Competencies
+
+Students should be able to:
+
+- Construct a simple backend server in python and Flask using RESTful architecture
+- Effectively be able to make use of Apple software to make HTTP requests and serialize JSON as needed
+- Assess the quality of their code using the “red, green, refactor” method for TDD
+- Identify and implement a RESTful backend architecture
+
 ## Projects
+
     1. Product Hunt API
-    2. Travel App - Backend
+    2. Travel App - Backend and Frontend
     3. Custom Project - Backend - Frontend
     
 ## Course Schedule
