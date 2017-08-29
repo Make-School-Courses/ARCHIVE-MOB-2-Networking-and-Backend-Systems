@@ -31,7 +31,7 @@ Students should be able to:
 
 - #### Week 1
     - [Intro to Networking in iOS](01-Intro-to-Networking)
-    - [Constructing Requests with URLs, URLRequests And URLSessions](02-Constructing-Requests-with-URLSession)
+    - [Constructing Requests with URLs, URLRequests And URLSessions](02-Constructing-Requests)
     - [Modeling data & Error Handling](03-Modeling-data)
     
 - #### Week 2
@@ -40,7 +40,7 @@ Students should be able to:
     - [Project - Product Hunt API](06-Project-Product-Hunt-API)
 
 - #### Week 3
-    - [Intro to Backend Systems - Creating a Flask API](07-Intro-To-Backend)
+    - [Intro to Backend Systems - Creating a Flask API](07-Intro-to-Backend)
     - [Resources and Routes](08-Resources-and-Routes)
     
 - #### Week 4
