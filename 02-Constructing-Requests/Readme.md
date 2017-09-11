@@ -13,6 +13,7 @@
 
 Download and run this playground:
 
-[Swift Playgrounds - URLRequests](url_requests.playground)
+[Swift Playgrounds - URLRequests](Networking.playground)
+[Networking Slides](client-server.key)
 
 ## Resources
