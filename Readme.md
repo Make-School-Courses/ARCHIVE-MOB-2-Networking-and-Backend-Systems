@@ -49,11 +49,11 @@ Students should be able to:
     - [Project - Travel App](10-Project-Travel-App)
     
 - #### Week 5
-    - [Project - Custom Project](15-Project-Travel-App)
+    - [Project - Custom Project](15-Custom-Project)
     - [Deployment](14-Deployment)
     
 - #### Week 6
-    - [Project - Custom Project]()
+    - [Project - Custom Project](15-Custom-Project)
 
 ## Evaluations
 
