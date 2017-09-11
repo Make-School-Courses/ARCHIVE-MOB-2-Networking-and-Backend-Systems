@@ -3,6 +3,5 @@
     <pages>
         <page name='Netwoking basics'/>
         <page name='Downloading JSON'/>
-        <page name='Authenticated Requests'/>
     </pages>
 </playground>

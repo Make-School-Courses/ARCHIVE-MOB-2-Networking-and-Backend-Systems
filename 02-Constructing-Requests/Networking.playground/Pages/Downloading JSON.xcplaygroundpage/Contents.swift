@@ -98,6 +98,7 @@ session.dataTask(with: postReq) { (data, resp, err) in
  ## Challenges
 
  1. Can you think of a type safe way to wrap the http methods of a request?
+ 2. Find some JSON API resources online and use URLSession to download the JSON
 
 */
 

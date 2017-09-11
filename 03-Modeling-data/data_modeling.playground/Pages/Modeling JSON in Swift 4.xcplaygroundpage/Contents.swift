@@ -48,3 +48,4 @@ extension Anime: Decodable {
 }
 
 PlaygroundPage.current.needsIndefiniteExecution = true
+

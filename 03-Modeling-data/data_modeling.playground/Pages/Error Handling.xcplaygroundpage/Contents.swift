@@ -48,7 +48,7 @@ class Networking {
     func getAnime(id: String, completion: @escaping (Result<[Anime]>) -> Void) {
         
         let request = URLRequest(url: baseURL)
-
+        
         session.dataTask(with: request) { (data, resp, err) in
             if let data = data {
                 let json = try! JSONSerialization.jsonObject(with: data, options: .allowFragments) as! Data
@@ -73,6 +73,6 @@ PlaygroundPage.current.needsIndefiniteExecution = true
 /*:
  ## Resources
  1. [JSON modeling with Swift 4](https://grokswift.com/json-swift-4/)
-*/
+ */
 
 //: [Next](@next)
