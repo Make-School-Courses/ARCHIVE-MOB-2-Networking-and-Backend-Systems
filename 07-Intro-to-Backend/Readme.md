@@ -7,7 +7,7 @@ In this portion of the class we are going to learn about internet architecture, 
 - Learn how to setup a python environment for develpment
 - Use git and github to manage your projects
 - Use package managers to fetch and manage requirements
-- Discover and practice restful patterns
+- Learn how to use the python debugger to debug your code
 
 ## Python and Environment Setup
 
@@ -103,9 +103,12 @@ import pdb
 ....
 ...
 
-def get(self):
+@app.route('/person')
+def person_route():
     pdb.set_trace()
-    pass
+    
+    json_person = {"name": "Eliel", 'age': 23}
+    return json_person
 
 ```
 
@@ -114,15 +117,13 @@ Run ``` python server.py ``` in terminal and visit http://127.0.0.1:5000/
 This gives us an interactive interface for inspecting our code.
 For example, we can inspect what is coming in from a request by checking:
 
-```python
 
-request
+- request
 
-request.json
+- request.json
 
-request.headers
+- request.headers
 
-```
 
 These shows us what in the request json, and request headers
 

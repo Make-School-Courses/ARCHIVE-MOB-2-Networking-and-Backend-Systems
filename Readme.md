@@ -41,6 +41,7 @@ Students should be able to:
 
 - #### Week 3
     - [Intro to Backend Systems - Creating a Flask API](07-Intro-to-Backend)
+    - [Databases](08-Databases)
     - [Resources and Routes](08-Resources-and-Routes)
     
 - #### Week 4
