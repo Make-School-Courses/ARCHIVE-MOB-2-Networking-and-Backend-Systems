@@ -5,7 +5,7 @@
 
 - Setup mongodb
 - Store data in your database
-- Perform queries on you database
+- Perform queries on your database
 
 ## Database Setup
 

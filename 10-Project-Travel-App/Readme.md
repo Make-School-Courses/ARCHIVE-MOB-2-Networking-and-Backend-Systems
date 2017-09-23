@@ -6,12 +6,14 @@
 We will be building a trip planning app that stores a list of trips for a user.
 The goal of this project is for you to practice everything you have learnt about building an API.
 
+Users can create a trip, add waypoints to a trip (a list of stops a user will take in a trip) and mark a trip as completed.
+
 ### The API
 
 Your API should contain/use:
 
-1. a relational database to store all our trips.(SQL, Postgres)
-2. a trips resource - you should be able to create, list, show, and destroy trips.
+1. a non-relational database to store all our trips.(mongodb)
+2. a trips resource - you should be able to create, list, show, update and destroy trips.
 3. completed trips are marked as completed.
 4. unit tests for all routes.
 
