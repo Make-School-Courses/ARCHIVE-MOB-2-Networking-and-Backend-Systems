@@ -20,7 +20,7 @@ Some of those include:
 - [x] Writted tests for each resource, covering edge cases
 
 
-Bonus Points
+### Bonus Points
 
 - [x] Well documented API
 - [x] Multi resource API

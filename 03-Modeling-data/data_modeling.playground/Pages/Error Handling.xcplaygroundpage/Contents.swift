@@ -3,6 +3,9 @@
 import Foundation
 import PlaygroundSupport
 
+/*:
+ Containers and Keys
+ */
 struct Anime {
     let title: String
     let thumbnail: URL
@@ -158,12 +161,13 @@ enum Result<T> {
 enum UserError: Error {
     case couldNotParse
     case noData
+    case networkError
 }
 
 func fetchUserResult(completion: @escaping (Result<User>) -> Void) {
     _ = URLSession.shared.dataTask(with: url) { (data, response, error) -> Void in
             if let error = error {
-                return completion( Result.failure(error) )
+                return completion( Result.failure(UserError.networkError) )
             }
             guard let data = data else {
                 return completion( Result.failure(UserError.noData) )
@@ -176,6 +180,15 @@ func fetchUserResult(completion: @escaping (Result<User>) -> Void) {
             }
     }.resume()
 }
+
+//fetchUserResult { (result) in
+//    switch result {
+//    case .success(user):
+//
+//    case .failure(error):
+//
+//    }
+//}
 
 PlaygroundPage.current.needsIndefiniteExecution = true
 
