@@ -9,6 +9,9 @@ In this portion of the class we are going to learn about internet architecture, 
 - Use package managers to fetch and manage requirements
 - Learn how to use the python debugger to debug your code
 
+## Class Materials
+
+[Slides - Intro to Backend](intro-to-backend.key)
 ## Python and Environment Setup
 
 1. If you don't already have brew, install brew by following the instructions here: https://brew.sh: 
@@ -30,15 +33,11 @@ Create a requirements.txt file containing these dependencies.
 
 aniso8601==1.0.0
 
-click==6.7
-
 Flask==0.10.1
 
-Flask-Jsonpify==1.5.0
+Flask-PyMongo==0.3.1
 
 Flask-RESTful==0.3.4
-
-Flask-SQLAlchemy==2.2
 
 itsdangerous==0.24
 
@@ -46,15 +45,15 @@ Jinja2==2.8
 
 MarkupSafe==0.23
 
-psycopg2==2.7.3
+pymongo==3.0.3
 
 pytz==2015.4
 
 six==1.9.0
 
-SQLAlchemy==1.1.12
-
 Werkzeug==0.10.4
+
+wheel==0.24.0
 
 
 ## Creating your first Flask app
