@@ -8,10 +8,13 @@ In this portion of the class we are going to learn about internet architecture, 
 - Use git and github to manage your projects
 - Use package managers to fetch and manage requirements
 - Learn how to use the python debugger to debug your code
+- Create your first route in flask
 
 ## Class Materials
 
 [Slides - Intro to Backend](intro-to-backend.key)
+
+
 ## Python and Environment Setup
 
 1. If you don't already have brew, install brew by following the instructions here: https://brew.sh: 
