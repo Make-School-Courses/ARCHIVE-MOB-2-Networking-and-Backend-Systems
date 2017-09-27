@@ -111,7 +111,7 @@ Collections are a group of related documents.
 eg. a collection representing all the users we have in our database.
 
 
-### Fetching documents from a collection
+### Fetching documents from a collection aka Querying
 
 Read the mongodb docs for fetching a single document:
 
@@ -139,6 +139,45 @@ You can put in a user collection these two documents:
 ### Creating/inserting a document into a collections
 
 [Mongodb inserting a document](http://api.mongodb.com/python/current/tutorial.html#inserting-a-document)
+
+
+## Using Mongodb Compass
+
+We will use the mongodb compass app to create our first mongo database and collection.
+
+
+1. First we have to connect to mongodb. Make sure you are running mongod in terminal!
+![0](0.png)
+
+
+2. Create a new database by clicking then "create database" button
+![1](1.png)
+
+
+3. Name your database "local" and create a "users" collection
+![3](3.png)
+
+
+4. You should see your newly created database listed 
+![4](4.png)
+
+
+5. Click on your databas "local", you should see your users collection 
+![5](5.png)
+
+
+6. Click on "insert document" button to insert a document in the users collection
+![6](6.png)
+
+
+7. Add a "name" and "location" property with values
+![7](7.png)
+
+
+8. Insert a few documents
+![8](8.png)
+
+
 
 ## Resources
 
