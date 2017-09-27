@@ -82,13 +82,26 @@ Run ```python app.py``` in terminal and copy the url in the terminal into a brow
 
 Lets try returning a JSON response when we hit our person_route function:
 
+*Note* we are importing the json library to convert our python objects to json.
+
 ```python
+import json
+from flask import Flask, request
+
+app = Flask(__name__)
+
 @app.route('/person')
 def person_route():
-    json_person = {"name": "Eliel", 'age': 23}
-    return json_person
+    person = {"name": "Eliel", 'age': 23}
+    json_person = json.dumps(person)
+    return (json_person, 200, None)
 
 ```
+
+We return a tuple of 3:
+- First parameter is the data we are sending back
+- Second is the status code
+- Third is any headers we want to add
 
 ## Using the Python Debugger
 
@@ -109,8 +122,9 @@ import pdb
 def person_route():
     pdb.set_trace()
     
-    json_person = {"name": "Eliel", 'age': 23}
-    return json_person
+    person = {"name": "Eliel", 'age': 23}
+    json_person = json.dumps(person)
+    return (json_person, 200, None)
 
 ```
 
@@ -144,33 +158,6 @@ Use:
 - **n** to go to the next line of execution.
 
 
-## Basic flask setup
-```python
-
-from flask import Flask, request, make_response
-from flask_restful import Resource, Api
-from pymongo import MongoClient
-
-# Basic Setup
-# 1
-app = Flask(__name__)
-# 2
-mongo = MongoClient('localhost', 27017)
-# 3
-app.db = mongo.develop_database
-# 4
-api = Api(app)
-
-```
-
-The first few lines are mostly boilerplate. First we import all the dependencies that we use throughout the rest of the file. Then we perform the following steps to set up the flask app:
-
-We create a flask instance and assign it to the app variable
-We establish a connection to our MongoDB service that's running locally
-We specify a particular database (develop_database) which we'll use to store data. We assign it to app.db. Throughout the rest of server.py we'll access app.db whenever we need to communicate with the DB.
-We create an instance of the flask_restful API. Later we'll add different endpoints to that API. The flask_restful library is not necessary for creating RESTful APIs, but it makes our lives a little easier by providing a specific format for defining endpoints for the different resources in our app.
-
-
 ## Resources
 
 1. Read the Flask documentation: http://flask.pocoo.org/docs/0.11/
@@ -180,5 +167,18 @@ We create an instance of the flask_restful API. Later we'll add different endpoi
 
 1. Add a new route called my_page and return some text.
 2. Use Paw or Postman to perform a get request to a "/pets" routes and return a list of your favorite pets in JSON format.
-3. Add a new route handler that receives POST requests to the route `/pets` with JSON data in the body and returns that JSON data unmodified in the response body. Test the `/pets` route using Paw, Curl, Postman, or another tool to make HTTP POST requests to ensure it responds correctly with the same data given in the request.
+3. Add a new route handler that receives POST requests to the route `/pets` with JSON data in the body(an array of pet objects) and returns that JSON data unmodified in the response body. Test the `/pets` route using Paw, Curl, Postman, or another tool to make HTTP POST requests to ensure it responds correctly with the same data given in the request.
 
+
+Eg array of pets
+[
+    {
+        'name': 'Charlie',
+        'color': 'Brown'
+    },
+    {
+        'name': 'Bingo',
+        'color': 'Blue'
+    }
+    
+]
