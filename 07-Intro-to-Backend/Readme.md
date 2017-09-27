@@ -171,6 +171,7 @@ Use:
 
 
 Eg array of pets
+```javascript
 [
     {
         'name': 'Charlie',
@@ -179,6 +180,6 @@ Eg array of pets
     {
         'name': 'Bingo',
         'color': 'Blue'
-    }
-    
+    }   
 ]
+```

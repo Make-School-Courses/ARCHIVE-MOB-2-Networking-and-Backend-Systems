@@ -18,8 +18,6 @@ Think **User** resource with user routes, trips resource with routes for trips
 
 Below the setup code that we just discussed we're implementing our first resource:
 
-#Implement REST Resource
-
 ```python
 
 class MyObject(Resource):
