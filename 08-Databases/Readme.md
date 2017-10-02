@@ -301,6 +301,7 @@ We will use the mongodb compass app to create our first mongo database and colle
 
 ## Challenges
 
+#### Creating collections and documents with a user interface
 1.
 
     a. Use the Mongod Compass app to create a database called local, and a collection called users.
@@ -321,7 +322,7 @@ We will use the mongodb compass app to create our first mongo database and colle
 
     b. Create 2-5 course documents
 
-
+#### Fetching and creating documents, handling post and get requests 
 3.
 
     a. Import pymongo into a flask project. Setup your mongo database and add it to your flask app.
@@ -341,7 +342,7 @@ We will use the mongodb compass app to create our first mongo database and colle
 
     f. Create another route called *count_courses* that returns the number of course documents in our database.
 
-
+#### Handling PATCH requests - updating and existing document
 
 4.
 
