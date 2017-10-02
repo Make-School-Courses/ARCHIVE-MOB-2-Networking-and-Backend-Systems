@@ -343,11 +343,12 @@ We will use the mongodb compass app to create our first mongo database and colle
 
 
 
-4. 
-    Create a cart *carts* collection and route that handles a user's cart items:
+4.
+
+    Create a *carts* collection and route that handles a user's cart items:
 
     Cart structure examples looks like this below:
-    
+
     ```javascript
     {
       "user": "Eliel",
@@ -363,7 +364,7 @@ We will use the mongodb compass app to create our first mongo database and colle
       ]
     }
     ```
-    
+
     Its made up of a user and an array of items with a brand and quantity.
 
     We want to be able to update our cart with either more items, or change the quantity of one item
