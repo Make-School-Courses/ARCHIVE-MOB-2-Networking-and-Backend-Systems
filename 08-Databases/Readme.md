@@ -151,12 +151,14 @@ result = users_collection.insert_one(
 
 ## Fetching(Finding) documents from a collection aka Querying
 
-#### Finding one document:
+### Finding one document:
 
 Find one will find the first document that matches the query defined.
 
-Eg below will find and return the first user with age = 23
+Eg below will find and return the first user with age that matches the query
 
+
+[Mongodb inserting a document](http://api.mongodb.com/python/current/tutorial.html#inserting-a-document)
 
 ```python
 
@@ -186,9 +188,6 @@ Read the mongodb docs for fetching a single document:
 
 [Fetching documents](http://api.mongodb.com/python/current/tutorial.html#getting-a-single-document-with-find-one)
 
-
-
-[Mongodb inserting a document](http://api.mongodb.com/python/current/tutorial.html#inserting-a-document)
 
 
 ## JSON Serialization with Flask and Mongodb BSON
