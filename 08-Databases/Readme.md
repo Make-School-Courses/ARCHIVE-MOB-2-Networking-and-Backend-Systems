@@ -136,7 +136,7 @@ You can put in a user collection these two documents:
 }
 
 
-### Creating/inserting a document into a collections
+### Creating/inserting a document into a collection
 
 [Mongodb inserting a document](http://api.mongodb.com/python/current/tutorial.html#inserting-a-document)
 
@@ -194,7 +194,6 @@ We will use the mongodb compass app to create our first mongo database and colle
     - name - string
     - age - number
     - location - string
-
 
 2.
 

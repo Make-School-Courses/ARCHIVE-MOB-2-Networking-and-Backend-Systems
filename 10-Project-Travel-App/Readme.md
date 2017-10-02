@@ -17,6 +17,11 @@ Your API should contain/use:
 3. completed trips are marked as completed.
 4. unit tests for all routes.
 
+## Client
+
+When you are done with the Flask API, write an iOS client to connect and display the list of trips.
+Authenticate the user, display trips and a detail of the trip with waypoints and completed status of each trip.
+
 
 ### Routes and Actions
 
@@ -46,6 +51,8 @@ Create unit tests for and then implement the following new resources and routes:
 
 ## Project Milestones
 
+Backend: 
+
 - [x] User - Create/Update a user - post request
 - [x] User - Get a user with a get request
 
@@ -56,9 +63,8 @@ Create unit tests for and then implement the following new resources and routes:
 - [x] User - Sign up a user, hash the password
 - [x] User - Sign in a user, check password with hash in database
 
+iOS Client:
 
-## Client
-
-When you are done with the Flask API, write an iOS client to connect and display the list of trips.
-Authenticate the user, display trips and a detail of the trip with waypoints and completed status of each trip.
+- [x] Authenticates user with HTTP Basic Auth
+- [x] Display list of trips, trip waypoints and completed status of each trip
 
