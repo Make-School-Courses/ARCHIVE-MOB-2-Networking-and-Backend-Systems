@@ -130,7 +130,7 @@ You can put in a user collection these two documents:
 }
 
 
-### Creating/inserting a document into a collection
+## Creating/inserting a document into a collection
 
 To insert a document in a collection, we must first grab the collection we wish to insert our document in:
 
@@ -149,7 +149,7 @@ result = users_collection.insert_one(
 
 ```
 
-### Fetching(Finding) documents from a collection aka Querying
+## Fetching(Finding) documents from a collection aka Querying
 
 #### Finding one document:
 
