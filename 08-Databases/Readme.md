@@ -335,11 +335,11 @@ We will use the mongodb compass app to create our first mongo database and colle
 
     d. Test your post route with a post request in Paw/postman/curl
 
-    e. Handle a get request to "courses" that looks for a course number from the url parameter, returns a 400 error if the course number parameter doesn't exit, and uses the course number to search our database courses collection for a document with the specified course number. Return a 200 and the course if its found.
+    e. Handle a get request to *courses* that looks for a course number from the url parameter, returns a 400 error if the course number parameter doesn't exit, and uses the course number to search our database courses collection for a document with the specified course number. Return a 200 and the course if its found.
 
-    e. Handle a get request to "courses" route that fetches and returns to the user all the courses in the database.
+    e. Handle a get request to *courses* route that fetches and returns to the user all the courses in the database.
 
-    f. Create another route called "count_courses" that returns the number of course documents in our database.
+    f. Create another route called *count_courses* that returns the number of course documents in our database.
 
 
 
@@ -349,7 +349,6 @@ We will use the mongodb compass app to create our first mongo database and colle
 
     Cart structure examples looks like this below:
 
-    ```javascript
     {
       "user": "Eliel",
       "items": [
@@ -363,7 +362,6 @@ We will use the mongodb compass app to create our first mongo database and colle
         }
       ]
     }
-    ```
 
     Its made up of a user and an array of items with a brand and quantity.
 
