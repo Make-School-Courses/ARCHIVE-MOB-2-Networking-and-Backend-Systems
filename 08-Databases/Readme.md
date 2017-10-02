@@ -322,48 +322,52 @@ We will use the mongodb compass app to create our first mongo database and colle
 
 3.
 
-a. Import pymongo into a flask project. Setup your mongo database and add it to your flask app.
+    a. Import pymongo into a flask project. Setup your mongo database and add it to your flask app.
 
-b. Create a 'courses' route that handles a post request to create a course
+    b. Create a 'courses' route that handles a post request to create a course
 
-c. Make sure that before the course is inserted into our database, it has these two properties of a course:
+    c. Make sure that before the course is inserted into our database, it has these two properties of a course:
 
-- name - string
-- number - number
+    - name - string
+    - number - number
 
-d. Test your post route with a post request in Paw/postman/curl
+    d. Test your post route with a post request in Paw/postman/curl
 
-e. Handle a get request to "courses" that looks for a course number from the url parameter, returns a 400 error if the course number parameter doesn't exit, and uses the course number to search our database courses collection for a document with the specified course number. Return a 200 and the course if its found.
+    e. Handle a get request to "courses" that looks for a course number from the url parameter, returns a 400 error if the course number parameter doesn't exit, and uses the course number to search our database courses collection for a document with the specified course number. Return a 200 and the course if its found.
 
-e. Handle a get request to "courses" route that fetches and returns to the user all the courses in the database.
+    e. Handle a get request to "courses" route that fetches and returns to the user all the courses in the database.
 
-f. Create another route called "count_courses" that returns the number of course documents in our database.
+    f. Create another route called "count_courses" that returns the number of course documents in our database.
 
 
 
-4. Create a cart *carts* collection and route that handles a user's cart items:
+4. 
+    Create a cart *carts* collection and route that handles a user's cart items:
 
-Cart structure examples looks like this below:
-
-{
-  "user": "Eliel",
-  "items": [
+    Cart structure examples looks like this below:
+    
+    ```javascript
     {
-      "brand": "Coke",
-      "quantity": 4
-    },
-    {
-      "brand": "Fanta",
-      "quantity": 1
+      "user": "Eliel",
+      "items": [
+        {
+          "brand": "Coke",
+          "quantity": 4
+        },
+        {
+          "brand": "Fanta",
+          "quantity": 1
+        }
+      ]
     }
-  ]
-}
+    ```
+    
+    Its made up of a user and an array of items with a brand and quantity.
 
-Its made up of a user and an array of items with a brand and quantity.
+    We want to be able to update our cart with either more items, or change the quantity of one item
 
-We want to be able to update our cart with either more items, or change the quantity of one item
+    a. Create a route that handles a patch request that updates a user's cart items 
 
-a. Create a route that handles a patch request that updates a user's cart items 
 
 
 *Hint* Remember to get your collection then perform actions on it.
