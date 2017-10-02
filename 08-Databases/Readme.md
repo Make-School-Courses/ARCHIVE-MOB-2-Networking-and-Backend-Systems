@@ -301,8 +301,10 @@ We will use the mongodb compass app to create our first mongo database and colle
 
 ## Challenges
 
-1. 
+1.
+
     a. Use the Mongod Compass app to create a database called local, and a collection called users.
+    
     b. Create 2-5 user documents in your collection with the following properties:
 
     - name - string
