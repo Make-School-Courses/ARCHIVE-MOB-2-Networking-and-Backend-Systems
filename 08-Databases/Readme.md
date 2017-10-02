@@ -243,6 +243,8 @@ class JSONEncoder(json.JSONEncoder):
 
 ```python
 
+from my_file_name import JSONEncoder
+
 @app.route('/my_route')
 def my_route()
     my_dict_from_json = request.json
@@ -336,6 +338,32 @@ e. Handle a get request to "courses" that looks for a course number from the url
 e. Handle a get request to "courses" route that fetches and returns to the user all the courses in the database.
 
 f. Create another route called "count_courses" that returns the number of course documents in our database.
+
+
+
+4. Create a cart *carts* collection and route that handles a user's cart items:
+
+Cart structure examples looks like this below:
+
+{
+  "user": "Eliel",
+  "items": [
+    {
+      "brand": "Coke",
+      "quantity": 4
+    },
+    {
+      "brand": "Fanta",
+      "quantity": 1
+    }
+  ]
+}
+
+Its made up of a user and an array of items with a brand and quantity.
+
+We want to be able to update our cart with either more items, or change the quantity of one item
+
+a. Create a route that handles a patch request that updates a user's cart items 
 
 
 *Hint* Remember to get your collection then perform actions on it.
