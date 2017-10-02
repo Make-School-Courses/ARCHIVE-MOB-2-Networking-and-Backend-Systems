@@ -111,12 +111,6 @@ Collections are a group of related documents.
 eg. a collection representing all the users we have in our database.
 
 
-### Fetching documents from a collection aka Querying
-
-Read the mongodb docs for fetching a single document:
-
-[Fetching documents](http://api.mongodb.com/python/current/tutorial.html#getting-a-single-document-with-find-one)
-
 ## Schema
 
 Document based databases are schemaless, that means they don't enforce strict rules on what kind of data should be in a document/collection
@@ -138,7 +132,127 @@ You can put in a user collection these two documents:
 
 ### Creating/inserting a document into a collection
 
+To insert a document in a collection, we must first grab the collection we wish to insert our document in:
+
+```python
+
+# Users from POST request
+users_dict = request.json
+
+# Our users collection
+users_collection = app.db.users
+
+# Inserting one user into our users collection
+result = users_collection.insert_one(
+    users_dict
+)
+
+```
+
+### Fetching(Finding) documents from a collection aka Querying
+
+#### Finding one document:
+
+Find one will find the first document that matches the query defined.
+
+Eg below will find and return the first user with age = 23
+
+
+```python
+
+user_age_dict = request.args
+
+# Grab user age from dict and and convert to integer for querying
+
+@app.route('/users', method=['GET'])
+def get_user_by_age():
+
+    user_age_dict = request.args
+    
+    user_age = int(user_age_dict['age'])
+
+    users_collection = app.db.users
+
+    result = users_collection.find_one({'age': user_age})
+
+    response_json = JSONEncoder().encode(result)
+
+    return (response_json, 200, None)
+
+    
+```
+
+Read the mongodb docs for fetching a single document:
+
+[Fetching documents](http://api.mongodb.com/python/current/tutorial.html#getting-a-single-document-with-find-one)
+
+
+
 [Mongodb inserting a document](http://api.mongodb.com/python/current/tutorial.html#inserting-a-document)
+
+
+## JSON Serialization with Flask and Mongodb BSON
+
+There are a couple of ways to serialize and deserialize json in python. We have the json module that will help us with that.
+
+But for Mongo, which stores it data as BSON, the json module doesnt know how to serialize nested composite types (ObjectId is an example).
+
+### Method 1 - Using Pymongo helpers:
+
+We can import these modules from the pymongo library to help us serialize those types:
+
+```python
+from bson import Binary, Code
+from bson.json_util import dumps
+```
+
+To serialize our object to return as a response we run this function:
+
+```python
+
+@app.route('/my_route')
+def my_route()
+    my_dict_from_json = request.json
+
+    json_representation = dumps(my_dict_from_json)
+
+    return  (json_representation, 200, None)
+
+```
+
+
+### Method 2 - Using a custom JSON encoder / serializer
+
+1. Create a separate file with this:
+
+```python
+
+import json
+from bson.objectid import ObjectId
+
+# Custom JSONEncoder that extracts the strings from MongoDB ObjectIDs
+# Thanks to http://stackoverflow.com/questions/16586180/typeerror-objectid-is-not-json-serializable
+class JSONEncoder(json.JSONEncoder):
+    def default(self, o):
+        if isinstance(o, ObjectId):
+            return str(o)
+        return json.JSONEncoder.default(self, o)
+
+```
+
+2. To serialize our json we do this:
+
+```python
+
+@app.route('/my_route')
+def my_route()
+    my_dict_from_json = request.json
+
+    json_representation = JSONEncoder.encode(my_dict_from_json)
+
+    return  (json_representation, 200, None)
+
+```
 
 
 ## Using Mongodb Compass
@@ -176,7 +290,6 @@ We will use the mongodb compass app to create our first mongo database and colle
 
 8. Insert a few documents
 ![8](8.png)
-
 
 
 ## Resources
