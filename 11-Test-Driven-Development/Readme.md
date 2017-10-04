@@ -86,6 +86,7 @@ class FlaskrTestCase(unittest.TestCase):
 
     def setUp(self):
         self.app = server.app.test_client()
+        
         # Run app in testing mode to retrieve exceptions and stack traces
         server.app.config['TESTING'] = True
         

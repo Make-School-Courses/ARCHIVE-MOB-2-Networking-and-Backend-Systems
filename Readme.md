@@ -62,4 +62,3 @@ To pass the course, students will have:
 
     1. Completed all challenges.
     
-
