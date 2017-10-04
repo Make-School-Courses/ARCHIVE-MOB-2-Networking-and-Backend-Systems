@@ -38,7 +38,8 @@ Writing code to be composable, perform a single responsibility can enable us to 
 ## Types of tests
 Different types of tests achieve different results. Depending on your project/language/preference you might choose to do one of the other, or use a combination of them.
 
-There are many types of testing but we will go over the top 3
+There are many types of testing but we will go over unit and integration tests
+
 - Unit Testing
 - Integration Testing
 - System Testing
@@ -70,7 +71,6 @@ To test our flask api, we need to import a few modules
 import server
 import unittest
 import json
-import base64
 from pymongo import MongoClient
 
 db = None
