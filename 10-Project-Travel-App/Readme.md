@@ -1,5 +1,8 @@
 # Project - Travel App API Project Spec
 
+Here is a link to some starter code for building this project:
+
+[Trip Planner Flask Starter](https://github.com/Product-College-Labs/trip-planner)
 
 ## Overview
 
