@@ -66,6 +66,9 @@ We need to setup our tests for each test case to run.
 #### #1
 To test our flask api, we need to import a few modules
 
+### *Note*
+import server below refers to the name of your flask app.
+
 ```python
 
 import server
@@ -97,7 +100,6 @@ class FlaskrTestCase(unittest.TestCase):
         server.app.db = db
         
         ## We do this to clear our database before each test runs
-        db.drop_collection('trips')
         db.drop_collection('users')
         
 ```
@@ -112,28 +114,23 @@ def test_getting_a_user(self):
     self.app.post('/user/',
                       headers=None,
                       data=json.dumps(dict(
-                          name="Eliel Gordon"
-                      )),
-                      content_type='application/json')
-
-    self.app.post('/user/',
-                      headers=None,
-                      data=json.dumps(dict(
-                          name="Peter"
+                          name="Eliel Gordon",
+                          email="eliel@example.com"
                       )),
                       content_type='application/json')
     
+    ## 3 Make a get request to fetch the posted user
+
     response = self.app.get('/user/',
-                                headers=None
-                                )
+                            query_string=dict(email="eliel@example.com")
+                        )
                                 
     # Decode reponse
     response_json = json.loads(response.data.decode())
     
     ## Actual test to see if GET request was succesful
-    ## Here we check the status code and size of response json, which contains 2 items
+    ## Here we check the status code
     self.assertEqual(response.status_code, 200)
-    self.assertEqual(len(response_json), 2)
 ```
 ## Challenges
 
