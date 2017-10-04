@@ -374,6 +374,3 @@ We will use the mongodb compass app to create our first mongo database and colle
 
 *Hint* Remember to get your collection then perform actions on it.
 
-
-
-

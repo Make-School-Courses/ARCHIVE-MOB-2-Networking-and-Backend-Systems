@@ -8,6 +8,11 @@
 - Understand request and response
 
 
+## Class Resources
+
+[RESTful routing - Slides](restful-routing.key)
+
+
 ## REST & Resourceful Routing
 
 We are going to be following REST standards building this API.
@@ -138,6 +143,6 @@ http://www.restapitutorial.com/httpstatuscodes.html
 
 ## Challenges
 
-1. Create a user route, validate that the parameters sent to the route has a username, email and password in the json payload sent to the server. Send back 200 when parameters match, 400 (Bad request) if parameters don't match
+1. Create a user Resource that responds to GET, PUT, POST, validate that the parameters sent to the route has a username, email and password in the json payload sent to your server. Send back 200 when parameters match, 400 (Bad request) if parameters don't match.
 
 

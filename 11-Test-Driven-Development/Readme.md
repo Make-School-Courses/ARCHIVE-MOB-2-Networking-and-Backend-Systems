@@ -3,6 +3,7 @@
 ## Vocabulary
 
 - TDD
+- Unit Testing
 - Integrated testing
 - Continous integration
 - Performance testing
@@ -12,6 +13,10 @@
 - Write tests for your API
 - Understand the benefits of writing tests
 
+
+## Class Materials
+
+[Test Driven Development - Slides](tdd.key)
 
 ## TDD
 
@@ -25,6 +30,9 @@ Writing good tests are hard, but with good architectural design, testing can be 
 Writing code to be composable, perform a single responsibility can enable us to write testable code.
 
 ## What should we test for?
+
+- Validation - parameters passed to server are of the correct type and value
+- Behaviours
 
 
 ## Types of tests
@@ -51,11 +59,86 @@ Unit testing tests individual components or group of related components. It is o
 
 ## Testing our flask API
 
-1. Come up with a resource/task and have students think of possible test cases. Have them vote on good ones and bad ones
+We need to setup our tests for each test case to run.
 
 
+#### #1
+To test our flask api, we need to import a few modules
+
+```python
+
+import server
+import unittest
+import json
+import base64
+from pymongo import MongoClient
+
+db = None
+
+```
+
+#### #2
+Create a class that inherits from unittest.TestCase
+
+```python
+
+class FlaskrTestCase(unittest.TestCase):
+
+    def setUp(self):
+        self.app = server.app.test_client()
+        # Run app in testing mode to retrieve exceptions and stack traces
+        server.app.config['TESTING'] = True
+        
+        # Inject test database into application
+        mongo = MongoClient('localhost', 27017)
+        global db
+        db = mongo.test_database
+        server.app.db = db
+        
+        ## We do this to clear our database before each test runs
+        db.drop_collection('trips')
+        db.drop_collection('users')
+        
+```
+
+#### #3
+Create tests for a user route with GET request
+
+```python
+def test_getting_a_user(self):
+
+    ## Post 2 users to database
+    self.app.post('/user/',
+                      headers=None,
+                      data=json.dumps(dict(
+                          name="Eliel Gordon"
+                      )),
+                      content_type='application/json')
+
+    self.app.post('/user/',
+                      headers=None,
+                      data=json.dumps(dict(
+                          name="Peter"
+                      )),
+                      content_type='application/json')
+    
+    response = self.app.get('/user/',
+                                headers=None
+                                )
+                                
+    # Decode reponse
+    response_json = json.loads(response.data.decode())
+    
+    ## Actual test to see if GET request was succesful
+    ## Here we check the status code and size of response json, which contains 2 items
+    self.assertEqual(response.status_code, 200)
+    self.assertEqual(len(response_json), 2)
+```
 ## Challenges
 
 1. Write 5 tests for our user/trip resource & route. 
 Examples of things you can test:
 - Constraints
+- Validation
+- Response from server
+
