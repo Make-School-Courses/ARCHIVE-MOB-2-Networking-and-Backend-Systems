@@ -18,11 +18,16 @@
 
 1. Sign up to Heroku(www.heroku.com) and Install the heroku toolbelt. Follow the instructions here https://devcenter.heroku.com/articles/heroku-cli#download-and-install
 
-2. Install gunicorn with: ```pip install gunicorn```
+2. Install gunicorn with: 
 
-3. Add gunicorn to your requirements.txt with ```pip freeze > requirements.txt```
+```pip install gunicorn```
+
+3. Add gunicorn to your requirements.txt with: 
+
+```pip freeze > requirements.txt```
 
 4. Create a Procfile. This is a special file used by heroku to configure your server and environment.
+
     a. Create a file called "Procfile" with no extensions.
     b. Paste this into the file ```web: gunicorn app:app```
     
@@ -33,9 +38,13 @@
 
 ![1](heroku1.png)
 
-![2](heroku1.png)
+![2](heroku2.png)
 
 7. Make sure your app is under version control (Git)
     a. git add
     b. git commit -m ""
     c. git push heroku
+    
+8. Visit to mLabs (https://www.mlab.com) and create and account and database.
+
+9. Connect your server to the mLabs database

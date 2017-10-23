@@ -30,7 +30,6 @@ Students should be able to:
 ## Course Schedule
 
 - #### Week 1
-    - [Intro to Networking in iOS](01-Intro-to-Networking)
     - [Constructing Requests with URLs, URLRequests And URLSessions](02-Constructing-Requests)
     - [Modeling data & Error Handling](03-Modeling-data)
     
