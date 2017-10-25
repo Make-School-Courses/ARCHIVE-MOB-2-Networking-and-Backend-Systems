@@ -71,7 +71,7 @@ To create a request you will at least have to have the URL and the HTTP Method/V
 
 After we send an HTTP request to a server, servers send back an HTTP response. 
 The response also has a:
-- Body: if response needs to send back a resource(data)
+- Body: if response needs to send back a resource(data) usually sent as JSON
 - Headers: Similar metadata to HTTP Request
 - Status Code: This indicates what happens on the server.
 
@@ -101,7 +101,7 @@ Watch:
 
 **Group Activity:**
 
-Forms groups of two (2) and:
+1. Forms groups of two (2) and:
 
     - Diagram the request-response cycle
     - Answer the following questions:
@@ -113,3 +113,7 @@ Forms groups of two (2) and:
         - Redirect Codes
         - Success Codes
         - Informational Codes
+        
+2. Complete Networking serialization/deserialization exercise from the playgrounds
+    
+    - Print out a specific value in the response JSON from a network request. eg. Poke API returns a list of pokemon. Print out the name of the first pokemon or any other attribute in the response JSON.
