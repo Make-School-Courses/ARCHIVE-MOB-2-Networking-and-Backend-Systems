@@ -117,3 +117,10 @@ Watch:
 2. Complete Networking serialization/deserialization exercise from the playgrounds
     
     - Print out a specific value in the response JSON from a network request. eg. Poke API returns a list of pokemon. Print out the name of the first pokemon or any other attribute in the response JSON.
+    
+3. Practice making network requests with an HTTP Client
+    
+    - Download Postman - [Postman Link](https://www.getpostman.com)
+    - Make a GET request to any API of choice
+    - Inspect the parts of the request, and the response sent back
+    - Make a POST request to an API that allows you to POST
