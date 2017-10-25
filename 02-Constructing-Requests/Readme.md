@@ -67,6 +67,17 @@ This describes the action to be performed on the server. GET gets a resource, PO
 
 To create a request you will at least have to have the URL and the HTTP Method/Verb. Depending on the type of request you make (eg. A post request will need a body) you will need to fill in the other parts of a request(eg. Body, URL params)
 
+## HTTP Response
+
+After we send an HTTP request to a server, servers send back an HTTP response. 
+The response also has a:
+- Body: if response needs to send back a resource(data)
+- Headers: Similar metadata to HTTP Request
+- Status Code: This indicates what happens on the server.
+
+Read this article on HTTP Status Codes:
+
+[HTTP Status Codes](https://httpstatuses.com)
 
 ## Backend vs Frontend
 
@@ -88,4 +99,16 @@ Watch:
 
 ## Challenges
 
+**Group Activity:**
 
+Forms groups of two (2) and:
+    - Diagram the request-response cycle
+    - Answer the following questions:
+        - What does REST stand for?
+        - List out the HTTP action verbs. Which ones make changes to the state, and which ones do not?
+    - List and categorize the HTTP Status Codes by:
+        - Client Errors
+        - Server Errors
+        - Redirect Codes
+        - Success Codes
+        - Informational Codes
