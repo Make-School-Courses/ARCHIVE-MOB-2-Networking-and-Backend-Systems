@@ -102,6 +102,7 @@ Watch:
 **Group Activity:**
 
 Forms groups of two (2) and:
+
     - Diagram the request-response cycle
     - Answer the following questions:
         - What does REST stand for?
