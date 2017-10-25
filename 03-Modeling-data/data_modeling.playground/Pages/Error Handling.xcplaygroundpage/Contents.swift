@@ -149,47 +149,6 @@ fetchUser() { (user: User?) in
     /* do something */
 }
 
-/*:
- How can you throw in case where the request failed?
-*/
-
-enum Result<T> {
-    case success(T)
-    case failure(Error)
-}
-
-enum UserError: Error {
-    case couldNotParse
-    case noData
-    case networkError
-}
-
-func fetchUserResult(completion: @escaping (Result<User>) -> Void) {
-    _ = URLSession.shared.dataTask(with: url) { (data, response, error) -> Void in
-            if let error = error {
-                return completion( Result.failure(UserError.networkError) )
-            }
-            guard let data = data else {
-                return completion( Result.failure(UserError.noData) )
-            }
-            do {
-                let user = try User(data: data)
-                completion( Result.success(user) )
-            } catch {
-                completion( Result.failure(error) )
-            }
-    }.resume()
-}
-
-//fetchUserResult { (result) in
-//    switch result {
-//    case .success(user):
-//
-//    case .failure(error):
-//
-//    }
-//}
-
 PlaygroundPage.current.needsIndefiniteExecution = true
 
 
