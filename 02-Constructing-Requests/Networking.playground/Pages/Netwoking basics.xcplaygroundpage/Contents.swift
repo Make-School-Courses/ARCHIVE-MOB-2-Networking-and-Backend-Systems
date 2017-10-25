@@ -36,15 +36,23 @@ import Foundation
 // 1
 let url = URL(string: "www.google.com/images/434.png")!
 
+//let body = JSONSerialization.data(withJSONObject: ["name": "eliel"], options: JSONSerialization.WritingOptions.prettyPrinted)
 // 2
 var request = URLRequest(url: url)
 request.httpMethod = "GET"
+//request.httpBody =
+
+
+typealias JSON = [String: Any]
 
 // 3
 let session = URLSession.shared
 
 // 4
 let downloadTask = session.dataTask(with: request) { (data, response, error) in
+    
+    _ = try! JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.allowFragments)
+    
     
 }
 

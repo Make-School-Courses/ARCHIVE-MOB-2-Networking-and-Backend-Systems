@@ -35,7 +35,6 @@ Students should be able to:
     
 - #### Week 2
     - [Intro to concurrency- GCD](04-Intro-to-Concurrency)
-    - [Design Pattern - SOLID](05-Design-Pattern-SOLID)
     - [Project - Product Hunt API](06-Project-Product-Hunt-API)
 
 - #### Week 3

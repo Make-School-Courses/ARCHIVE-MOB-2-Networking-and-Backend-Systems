@@ -34,6 +34,7 @@ let task = session.dataTask(with: request) { (data, response, error) in
         let json = try? JSONSerialization.jsonObject(with: data, options: .allowFragments)
         print(json)
     }
+    
 }
 
 // Don't forget to resume task
@@ -70,7 +71,7 @@ task.resume()
  }
  }
  
- From the above example we can see that the keys are always Strings and the values can be *Any* type of object(Int, String, Array, another JSON Object).
+ From the example above we can see that the keys are always Strings and the values can be *Any* type of object(Int, String, Array, another JSON Object).
  
  */
 
@@ -103,8 +104,10 @@ session.dataTask(with: postReq) { (data, resp, err) in
 */
 
 
-/*: ## Resources
+/*: ##Resources
+ 
  [URLSessions](https://www.raywenderlich.com/158106/urlsession-tutorial-getting-started)
+ 
  */
 
 //: Below is code required to run this playground, it is not a part of the class material
