@@ -8,9 +8,9 @@ A client wants to build a simple wrapper around Product Hunt using the PH API. T
 
 - [x] Make a networking request to fetch all of the products featured today on PH.
 
-- [x] Convert the data returned into models.
+- [x] Convert the data returned into Swift models.
 
-- [x] Display the data returned in a feed that shows each product's name, tagline, number of votes, and thumbnail.
+- [x] Display the data returned in a feed(UITableView) that shows each product's name, tagline, number of votes. Optionallay you can show the thumbnail image.
 
 - [x] If a user clicks on a post, show a new screen with all the comments for that post, sorted in descending order.
 
