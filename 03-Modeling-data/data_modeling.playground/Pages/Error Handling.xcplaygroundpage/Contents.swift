@@ -7,6 +7,17 @@ import PlaygroundSupport
  ## Containers and Keys
  */
 
+/*
+ {
+     "data": [
+ 
+         ]
+ }
+ */
+struct AnimeList: Decodable {
+    let data: [Anime]
+}
+
 struct Anime {
     let title: String
     let thumbnail: URL
@@ -43,7 +54,11 @@ extension Anime: Decodable {
 
     init(from decoder: Decoder) throws {
         
+        // Top Level Container
         let container = try decoder.container(keyedBy: Keys.self) // defining our (keyed) container
+        
+        // Id - top level in data array
+        let id: String = try container.decode(String.self, forKey: .id)
         
         // Attributes Container
         let attributesContainer = try container.nestedContainer(keyedBy: AttributeKey.self, forKey: .attributes)
@@ -52,9 +67,6 @@ extension Anime: Decodable {
         let titlesEnContainer = try attributesContainer.nestedContainer(keyedBy: TitleKeys.self, forKey: .titles)
         
         let title: String = try titlesEnContainer.decodeIfPresent(String.self, forKey: .en) ?? ""
-        
-        // Id - top level in data array
-        let id: String = try container.decode(String.self, forKey: .id)
         
 //        // Poster Image
         let thumbnailContainer = try attributesContainer.nestedContainer(keyedBy: ThumbnailKeys.self, forKey: .posterImage)
@@ -65,9 +77,8 @@ extension Anime: Decodable {
     }
 }
 
-struct AnimeList: Decodable {
-    let data: [Anime]
-}
+
+
 
 typealias JSON = [String: Any]
 
@@ -88,6 +99,7 @@ class Networking {
         let request = URLRequest(url: baseURL)
         
         session.dataTask(with: request) { (data, resp, err) in
+            // Callback, this happens at a later time. Function exits before callback is called
             if let data = data {
                 
                 let animeList = try? JSONDecoder().decode(AnimeList.self, from: data)

@@ -21,10 +21,12 @@ import PlaygroundSupport
 struct Anime {
     let title: String
     let thumbnail: URL
+    let size: Int
     
-    init(title: String, thumbnail: URL) {
+    init(title: String, thumbnail: URL, size: Int) {
         self.title = title
         self.thumbnail = thumbnail
+        self.size = size
     }
 }
 
@@ -35,17 +37,23 @@ extension Anime: Decodable {
     enum Keys: String, CodingKey {
         case title
         case thumbnail
+        case size
     }
     
     // 2
     init(from decoder: Decoder) throws {
-        // define our keyed container
+        // define our keyed container, and keys for container
         let container = try decoder.container(keyedBy: Keys.self)
         
+        // Decode keys
         let title: String = try container.decode(String.self, forKey: .title) // extracting the data
+        
         let thumbnail: URL = try container.decode(URL.self, forKey: .thumbnail)
         
-        self.init(title: title, thumbnail: thumbnail)
+        let size: Int = try container.decode(Int.self, forKey: .size)
+        
+        // Initialize
+        self.init(title: title, thumbnail: thumbnail, size: size)
     }
 }
 
