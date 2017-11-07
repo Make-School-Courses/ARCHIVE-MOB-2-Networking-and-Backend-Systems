@@ -38,6 +38,7 @@ Students should be able to:
     - [Project - Product Hunt API](06-Project-Product-Hunt-API)
 
 - #### Week 3
+    - [Project - Travel App](10-Project-Travel-App)
     - [Intro to Backend Systems - Creating a Flask API](07-Intro-to-Backend)
     - [Databases](08-Databases)
     - [Resources and Routes](08-Resources-and-Routes)
@@ -45,7 +46,6 @@ Students should be able to:
 - #### Week 4
     - [Test-Driven-Development](11-Test-Driven-Development)
     - [Authentication & Security](12-Authentication-and-Security)
-    - [Project - Travel App](10-Project-Travel-App)
     
 - #### Week 5
     - [Project - Custom Project](15-Custom-Project)

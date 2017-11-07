@@ -58,6 +58,9 @@ Werkzeug==0.10.4
 
 wheel==0.24.0
 
+**Run:**
+
+pip install -r requirements.text
 
 ## Creating your first Flask app
 
