@@ -141,6 +141,10 @@ if __name__ == '__main__':
     unittest.main()
 ```
 
+## Resources
+
+[Testing a Flask App](http://flask.pocoo.org/docs/0.12/testing/)
+
 ## Challenges
 
 1. Write 5 tests for our user/trip resource & route. 
