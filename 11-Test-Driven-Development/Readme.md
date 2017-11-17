@@ -132,6 +132,15 @@ def test_getting_a_user(self):
     ## Here we check the status code
     self.assertEqual(response.status_code, 200)
 ```
+
+#### #4
+Make sure to add this to the bottom of your test file.
+
+```python
+if __name__ == '__main__':
+    unittest.main()
+```
+
 ## Challenges
 
 1. Write 5 tests for our user/trip resource & route. 
