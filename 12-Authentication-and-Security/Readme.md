@@ -186,7 +186,7 @@ else:
     ## Tell user they have invalid credentials
         
 # Method 2: Use checkpw
-if bcrypt.checkpw(jsonEncodedPassword, bcrypt.gensalt(app.bcrypt_rounds)) == True:
+if bcrypt.checkpw(jsonEncodedPassword, database_user['password']) == True:
     ## Let them in
 else:
     ## Send 401 - Unauthorized
