@@ -126,6 +126,21 @@ Salt is added to the hash function to make it harder for hash collisions and bru
 The salt for our hash function is referred to as the bcrypt_rounds. This makes it harder to guess the password, but takes longer for bcrypt to hash the password.
 
 
+#### Getting HTTP Basic Auth parameters
+
+You can grab decoded HTTP Basic Auth information by accessing:
+
+```python
+auth_info = request.authorization
+
+#username
+auth_info.username
+
+#password
+auth_info.password
+auth_info.password
+```
+
 #### Test hashing passwords 
 
 Use this link to test hashing passwords online:
