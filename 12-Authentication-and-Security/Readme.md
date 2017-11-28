@@ -138,7 +138,6 @@ auth_info.username
 
 #password
 auth_info.password
-auth_info.password
 ```
 
 #### Test hashing passwords 
@@ -176,12 +175,21 @@ To authenticate a user, we need to find out if hash of the the password they pas
 # Find user by email 
 database_user = user_collection.find_one({'email': email})
 
-# Check if client password from login matches database password
-if bcrypt.hashpw(jsonPassword, database_user['password']) == database_user['password']:
+# Encode password
+jsonEncodedPassword = request.json['password'].encode('utf-8')
+
+## Check if client password from login matches database password
+# Method 1: Use hashpw to compare passwords
+if bcrypt.hashpw(jsonEncodedPassword, database_user['password']) == database_user['password']:
     ## Let them in
 else:
     ## Tell user they have invalid credentials
-                         
+        
+# Method 2: Use checkpw
+if bcrypt.checkpw(jsonEncodedPassword, bcrypt.gensalt(app.bcrypt_rounds)) == True:
+    ## Let them in
+else:
+    ## Send 401 - Unauthorized
 ```
 
 
