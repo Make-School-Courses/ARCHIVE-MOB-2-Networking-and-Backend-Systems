@@ -200,7 +200,9 @@ else:
 
 Python documentation on decorators:
 
-https://wiki.python.org/moin/PythonDecorators
+[Official Python Documentation on Decorators](https://wiki.python.org/moin/PythonDecorators)
+
+[Python Decorators - Examples](https://realpython.com/blog/python/primer-on-python-decorators/)
 
 ## Authorization
 
