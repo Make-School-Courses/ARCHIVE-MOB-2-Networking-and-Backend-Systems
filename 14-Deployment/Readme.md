@@ -13,6 +13,18 @@
 - Heroku
 - Digital Ocean
 
+## Deploying
+
+We will be deploying our TripPlanner server to Heroku. To do that, we need to deploy our python app, and also create an mongo database instance online.
+
+
+## Creating a database instance on Mlabs
+
+
+1. Visit to mLabs (https://www.mlab.com) and create and account and database.
+
+2. Connect your server to the mLabs database
+
 
 ## Deploying to Heroku
 
@@ -44,7 +56,3 @@
     a. git add
     b. git commit -m ""
     c. git push heroku
-    
-8. Visit to mLabs (https://www.mlab.com) and create and account and database.
-
-9. Connect your server to the mLabs database
