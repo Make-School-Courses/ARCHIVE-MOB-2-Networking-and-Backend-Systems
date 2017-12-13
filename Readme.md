@@ -16,10 +16,11 @@ We will learn about networking in iOS, explore how to make network requests and 
 
 Students should be able to:
 
-- Construct a simple backend server in python and Flask using RESTful architecture
-- Effectively be able to make use of Apple software to make HTTP requests and serialize JSON as needed
-- Assess the quality of their code using the “red, green, refactor” method for TDD
-- Identify and implement a RESTful backend architecture
+- Construct a simple backend server in Python and Flask using RESTful architecture.
+- Effectively make use of industry-standard software packages and libraries to make HTTP requests and serialize/deserialize JSON as needed.
+- Assess the quality of their code using the “red, green, refactor” method for Test-Driven-Development (TDD).
+- Design and implement a RESTful backend architecture.  
+
 
 ## Projects
 
